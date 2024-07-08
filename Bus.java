@@ -13,8 +13,9 @@ public class Bus {
         this.totalPassengers = totalPassengers;
     }
 
-    public void pickUp(int passenger) {
+    public void pickUp(int passenger, Wallet wallet) {
         totalPassengers += passenger;
+        wallet.purchase(passenger * ticketPrice);
     }
 
     public String getBusNumber() {
